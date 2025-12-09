@@ -1,4 +1,4 @@
-#include "Zombie.h"
+#include "Zombie.hpp"
 
 Zombie* zombieHorde( int N, std::string name )
 {
@@ -7,9 +7,8 @@ Zombie* zombieHorde( int N, std::string name )
 
     while(i < N)
     {
-        cout  << i+1<< " "; 
-        zz->setName(name);
-        zz->announce();
+        zz[i].setName(name);
+        zz[i].announce();
         i++;
     }
     return zz;

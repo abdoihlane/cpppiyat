@@ -1,9 +1,8 @@
-#include "Zombie.h"
+#include "Zombie.hpp"
 
-int main()
-{
-    string sa = "sss";
-    Zombie *aa = zombieHorde(10,sa);
-        delete[] aa;
-    
+int main() {
+    int n = 5;
+    Zombie* horde = zombieHorde(n, "rich");
+    delete[] horde; 
+    return 0;
 }
