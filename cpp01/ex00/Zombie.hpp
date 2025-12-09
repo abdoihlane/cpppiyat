@@ -8,15 +8,12 @@ using namespace std;
 class Zombie {
 private:
     std::string name;
-
 public:
-    Zombie(string n) {
-        name = n;
-    }
-
-    void announce() {
-        cout << name << ": BraiiiiiiinnnzzzZ..." << endl;
-    }
+    Zombie(string n);
+    ~Zombie();
+    Zombie* newZombie( std::string name );
+    void randomChump(std::string name );
+    void announce();
 };
 
-#endif
+#endif 

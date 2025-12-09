@@ -9,6 +9,5 @@ class ex04{
     std::string s1;
     std::string s2;
     std::string filename;
-
 };
 #endif

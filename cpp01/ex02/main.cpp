@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 
-
 int main()
 {
     std::string  ss = "HI THI IS BRAIN";
