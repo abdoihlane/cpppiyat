@@ -1,0 +1,45 @@
+   if (vec.size() % 2 != 0) {
+        oddElement.push_back(vec.back());
+        vec.pop_back();
+    }
+what is this,
+  for (size_t i = 0; i < vec.size(); i += 2) {
+        if (vec[i] > vec[i+1]) {
+            mainChain.push_back(vec[i]);
+            pend.push_back(vec[i+1]);
+        } else {
+            mainChain.push_back(vec[i+1]);
+            pend.push_back(vec[i]);
+        }
+    }
+    why do we increment eith two what if heve odd nb of element 
+    if (!pend.empty()) {
+        mainChain.insert(mainChain.begin(), pend[0]);
+        pend.erase(pend.begin());
+    }
+    why is this posioned in its place 
+    int PmergeMe::generateJacobsthal(int n) {
+    if (n == 0) return 0;
+    if (n == 1) return 1;
+    return generateJacobsthal(n - 1) + 2 * generateJacobsthal(n - 2);
+}
+
+std::vector<int> PmergeMe::buildJacobsthalSequence(int size) {
+    std::vector<int> jacobSeq;
+    int index = 3; // start from Jacobsthal(3) = 3
+    while (true) {
+        int jacobNum = generateJacobsthal(index);
+        if (jacobNum > size) {
+            jacobSeq.push_back(jacobNum);
+            break;
+        }
+        jacobSeq.push_back(jacobNum);
+        index++;
+    }
+    return jacobSeq;
+}
+why do we start from 3, wnd what does build....seq do?
+    if (!oddElement.empty()) {
+        std::vector<int>::iterator it = std::lower_bound(mainChain.begin(), mainChain.end(), oddElement[0]);
+        mainChain.insert(it, oddElement[0]);
+    } why this at the end

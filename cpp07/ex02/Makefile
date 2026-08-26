@@ -3,7 +3,7 @@ NAME := iterator
 CXX := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 
-SRCS := man.cpp
+SRCS := main.cpp
 OBJS := $(SRCS:.cpp=.o)
 
 
